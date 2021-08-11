@@ -1,4 +1,28 @@
+body {
+  font-family: roboto mono;
+}
+.weather-app {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #dadde1;
+  border-radius: 5px;
+}
 h1 {
-    text-align: center;
-    color: rgb(194, 196, 119);
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
 }
