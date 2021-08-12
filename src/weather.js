@@ -29,9 +29,8 @@ function formartDate(timestamp) {
   return `${hours}:${minutes}, ${currentDay} ${currentMonth} ${dateDay}`;
 }
 function displayTemperature(response) {
-  console.log(response.data);
-  let temperature = (document.querySelector("#temperature").innerHTML =
-    Math.round(response.data.main.temp));
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
   let feelsLikeElement = document.querySelector("#feels-like");
@@ -45,5 +44,6 @@ function displayTemperature(response) {
 }
 
 let apiKey = "06c815873f95de2eb641338b25fec569";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Aspen&appid=${apiKey}&units=imperial`;
+let city = "Aspen";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
 axios.get(apiUrl).then(displayTemperature);
