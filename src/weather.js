@@ -30,17 +30,23 @@ function formartDate(timestamp) {
 }
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
   let feelsLikeElement = document.querySelector("#feels-like");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
+  let currentIconElement = document.querySelector("#current-icon");
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   feelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formartDate(response.data.dt * 1000);
+  currentIconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  currentIconElement.setAttribute("atl", response.data.weather[0].description);
 }
 
 let apiKey = "06c815873f95de2eb641338b25fec569";
