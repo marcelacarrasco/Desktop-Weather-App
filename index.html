@@ -21,26 +21,34 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <div class="row">
-          <div class="col-6">
-            <h1>Aspen</h1>
-            <ul>
-              <li>12:00pm, Wed Aug 11</li>
-              <li>Smoke</li>
-            </ul>
-          </div>
-          <div class="col-6">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/fog.png"
-              alt="smoke"
-            />
-            <h2>81</h2>
-            <span>°F | °C</span>
-            <ul>
-              <li>Feels like: 83°F</li>
-              <li>Wind: 7mph</li>
-            </ul>
+      <div class="weather-wrapper">
+        <div class="weather-app">
+          <div class="row">
+            <div class="col-5">
+              <h1>Aspen</h1>
+              <ul>
+                <li>12:00pm, Wed Aug 11</li>
+                <li>Smoke</li>
+              </ul>
+            </div>
+            <div class="col-7">
+              <div class="current-temperature">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/fog.png"
+                  alt="smoke"
+                />
+                <strong>81</strong
+                ><span class="degrees"
+                  >°F|<a href="#" class="celsius">°C</a></span
+                >
+                <div class="current-stats">
+                  <ul>
+                    <li>Feels like: 83°F</li>
+                    <li>Wind: 7mph</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <small>
@@ -52,7 +60,7 @@
           by Marcela CC
         </small>
       </div>
-      <script src="src/weather.js"></script>
     </div>
+    <script src="src/weather.js"></script>
   </body>
 </html>
