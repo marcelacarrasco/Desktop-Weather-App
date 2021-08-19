@@ -1,5 +1,6 @@
 body {
   font-family: roboto mono;
+  color: #212529;
 }
 
 h1 {
@@ -72,4 +73,14 @@ li {
 }
 .wind {
   text-transform: none;
+}
+.fahrenheit {
+  text-decoration: none;
+}
+.current-temperature .active {
+  color: #212529;
+  cursor: default;
+}
+.current-temperature .active:hover {
+  text-decoration: none;
 }
