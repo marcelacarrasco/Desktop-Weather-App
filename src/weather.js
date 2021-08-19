@@ -80,6 +80,31 @@ function displayFahrenheitTemperature(event) {
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2">
+        <div class="weekly-date">${day}</div>
+        <img
+          src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
+          alt="broken-clouds"
+          />
+          <div class="weekly-units">
+          <span class="weekly-units-max"> 68° </span>
+          <span class="weekly-units-min"> 45° </span>
+          </div>
+          </div>
+  `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
@@ -92,3 +117,5 @@ let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 search("Aspen");
+
+displayForecast();
