@@ -6,12 +6,14 @@ body {
 h1 {
   font-size: 24px;
   line-height: 28px;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 0;
+  margin-left: 50px;
 }
 ul {
   margin: 0;
   padding: 0;
+  margin-left: 25px;
 }
 li {
   list-style: none;
@@ -21,17 +23,23 @@ li {
   margin: 0;
   padding: 0;
   text-transform: capitalize;
+  margin-left: 25px;
+}
+hr {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .weather-wrapper {
-  max-width: 700px;
-  margin: 30px auto;
+  max-width: 750px;
+  margin: 50px auto;
 }
 .weather-app {
-  max-width: 700px;
-  margin: 30px auto;
-  padding: 20px;
+  max-width: 750px;
+  margin: 50px auto;
+  padding: 50px;
   border: 1px solid #dadde1;
   border-radius: 5px;
+  background-color: #cfdbe2;
 }
 .current-temperature img {
   display: inline-block;
@@ -40,6 +48,7 @@ li {
   margin-top: unset;
   width: 60px;
   margin-right: 0px;
+  margin-left: 50px;
 }
 .current-temperature strong {
   font-size: 50px;
@@ -67,6 +76,7 @@ li {
   line-height: 16px;
   padding-left: 9px;
   padding-top: 6px;
+  margin-left: 55px;
 }
 .celsius {
   text-decoration: none;
@@ -98,5 +108,9 @@ li {
 .weekly-units {
   font-size: 13px;
 }
-
-
+input {
+  margin-bottom: 30px;
+}
+.button {
+  background-color: #e8ddd4;
+}

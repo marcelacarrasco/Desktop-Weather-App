@@ -54,6 +54,7 @@ function displayForecast(response) {
             forecastDay.weather[0].icon
           }@2x.png"
           alt="broken-clouds"
+          width="60"
           />
           <div class="weekly-units">
           <span class="weekly-units-max"> ${Math.round(

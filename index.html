@@ -20,11 +20,11 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Weather App</title>
   </head>
-  <body>
+  <body class="color">
     <div class="container">
       <div class="weather-wrapper">
         <div class="weather-app">
-          <form id="search-form" class="mb-3">
+          <form id="search-form" class="mb-3 form">
             <div class="row">
               <div class="col-9">
                 <input
@@ -39,7 +39,7 @@
                 <input
                   type="submit"
                   value="search"
-                  class="btn btn-primary width-80"
+                  class="btn btn-primary width-80 button"
                 />
               </div>
             </div>
@@ -73,9 +73,9 @@
             </div>
           </div>
 
-          <div class="weekly-temperature" id="forecast">
-            
-          </div>
+          <hr />
+
+          <div class="weekly-temperature" id="forecast"></div>
         </div>
         <small>
           <a
